@@ -1,7 +1,14 @@
 // chess.js
 const board = document.getElementById('board');
 const squares = [];
-const pieces = ['♜', '♞', '♝', '♛', '♚', '♝', '♞', '♜', '♟', '♟', '♟', '♟', '♟', '♟', '♟', '♟', '♙', '♙', '♙', '♙', '♙', '♙', '♙', '♙', '♖', '♘', '♗', '♕', '♔', '♗', '♘', '♖'];
+const pieces = ['♜', '♞', '♝', '♛', '♚', '♝', '♞', '♜',
+                '♟', '♟', '♟', '♟', '♟', '♟', '♟', '♟', 
+                '', '', '', '', '', '', '', '',
+                '', '', '', '', '', '', '', '',
+                '', '', '', '', '', '', '', '',
+                '', '', '', '', '', '', '', '',
+                '♙', '♙', '♙', '♙', '♙', '♙', '♙', '♙',
+                '♖', '♘', '♗', '♕', '♔', '♗', '♘', '♖'];
 let selectedSquare = null;
 
 // Initialize the board
@@ -18,6 +25,9 @@ for (let i = 0; i < 64; i++) {
     square.classList.add('black');
   }
 }
+
+// Place the pieces to correctly start the game
+
 
 // Function to handle square selection
 function selectSquare(square) {
